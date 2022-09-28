@@ -1,0 +1,33 @@
+{
+    "manifest_version": 3,
+    "name" : "Monkey Typer",
+    "description" : "Helps you type faster by typing for you.",
+    "version" : "0.1.0",
+    "author" : "Ali Qadir",
+
+    "action" : {
+        "default_popup" : "popup.html",
+        "default_title" : "Monkey Typer"
+    },
+    "defualt_locale" : "en",
+    
+    "permissions" : [
+        "tabs"
+    ],
+
+    "content_scripts" : [
+        {
+            "matches" : ["*://*.monkeytype.com/*"],
+            "js" : ["content.js"]
+        }
+    ],
+    "background" : {
+        "scripts" : ["background.js"]
+    },
+
+    "icons" : {
+        "16" : "monkey.png",
+        "48" : "monkey.png",
+        "128" : "monkey.png"
+    }
+}
